@@ -12,7 +12,7 @@ body {
   text-align: center;
   min-height: 100vh;
   overflow-x: hidden;
-  cursor: url('images/red-heart-cursor.png'), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><text y="20" font-size="20">❤️</text></svg>') 12 12, pointer;
+  cursor: url('images/seal-cursor.png') 16 16, url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text y="28" font-size="28">🦭</text></svg>') 16 16, auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -188,4 +188,5 @@ body {
   .hearts span {
     font-size: 60px;
   }
+
 }
