@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Password Only Maksio Can Find 💗</title>
+<link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+<div class="container">
+
+  <h1>🔐 Password Only Maksio Can Find</h1>
+  <p>you love me and u are my smart cyber sec boy soo find it</p>
+
+  <input type="password" id="password" placeholder="Enter secret password">
+  <button onclick="checkPassword()">Access</button>
+
+  <div class="terminal">
+    <p>> system booting...</p>
+    <p>> ull find out, i did so that it only for us</p>
+    <p>> inspect. decode. think.</p>
+  </div>
+
+  <p id="hint"></p>
+</div>
+
+<!-- REAL PART 1: kartuli -->
+<!-- FAKE PASSWORDS: maksilove, iloveyou, hackerking -->
+<!-- PART 3 BASE64: cG9sc2tpY2h1ag== -->
+
+<script>
+console.log("REAL PART 2: puczu");
+console.log("Decoy password: xachapuri");
+
+function checkPassword() {
+  const input = document.getElementById("password").value;
+
+  const fakePasswords = [
+    "maksiomarikuna",
+    "iloveyou",
+    "bladee",
+    "xachapuri"
+  ];
+
+  if (fakePasswords.includes(input)) {
+    document.getElementById("hint").innerText =
+      "noooo think do againnnnnn";
+    return;
+  }
+
+  const correct = "kartulipuczupolskichuj";
+
+  if (input === correct) {
+    window.location.href = "afterpassword.html";
+  } else {
+    document.getElementById("hint").innerText =
+      "nooo maksiiiiiii thinkkkkk my and your fav foods 😼";
+  }
+}
+</script>
+</body>
+</html>

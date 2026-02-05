@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  background-color: pink;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* CENTER TEXT */
+.center-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.center-message h2 {
+  color: purple;
+  font-size: 36px;
+}
+
+.center-message p {
+  color: white;
+  font-size: 20px;
+}
+
+/* PHOTOS */
+.photo {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* POSITIONS */
+.p1  { top: 20px; left: 30px; }
+.p2  { top: 20px; right: 30px; }
+.p3  { bottom: 30px; left: 400px; }
+.p4  { bottom: 50px; right: 350px; }
+
+.p5  { top: 200px; left: 120px; }
+.p6  { top: 200px; right: 100px; }
+
+.p7  { bottom: 10px; left: 170px; }
+.p8  { bottom: 130px; right: 12px; }
+
+.p9  { bottom: 20%; left: 12px; }
+.p10 { top: 5%; right: 300px; }
+
+.p13 { top: 20px; left: 45%; }
+.p14 { bottom: 20px; left: 45%; }
+
+.p11 { top: 70%; right: 150px; }
+.p12 {
+  top: 6%;       /* adjust as you like */
+  left: 350px;    /* adjust as you like */
+}
+.next-button {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  font-size: 20px;
+  color: white;
+  background-color: purple;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.next-button:hover {
+  background-color: darkviolet;
+}

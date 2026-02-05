@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffb6d9 0%, #ffd4e5 100%);
+  font-family: Georgia, serif;
+  text-align: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  cursor: url('images/red-heart-cursor.png'), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><text y="20" font-size="20">❤️</text></svg>') 12 12, pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FLOATING HEARTS BACKGROUND */
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hearts span {
+  position: absolute;
+  font-size: 80px;
+  opacity: 0.7;
+  animation: float 8s infinite ease-in-out;
+  filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.5));
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-30px) rotate(5deg);
+  }
+  75% {
+    transform: translateY(-30px) rotate(-5deg);
+  }
+}
+
+/* Heart positions with staggered animations */
+.hearts span:nth-child(1) { top: 5%; left: 10%; animation-delay: 0s; }
+.hearts span:nth-child(2) { top: 10%; right: 15%; animation-delay: 0.5s; font-size: 70px; }
+.hearts span:nth-child(3) { bottom: 10%; left: 5%; animation-delay: 1s; font-size: 90px; }
+.hearts span:nth-child(4) { bottom: 15%; right: 10%; animation-delay: 1.5s; }
+.hearts span:nth-child(5) { top: 40%; left: 5%; animation-delay: 2s; font-size: 75px; }
+.hearts span:nth-child(6) { top: 35%; right: 8%; animation-delay: 2.5s; font-size: 85px; }
+.hearts span:nth-child(7) { top: 60%; left: 12%; animation-delay: 3s; }
+.hearts span:nth-child(8) { top: 65%; right: 15%; animation-delay: 3.5s; font-size: 95px; }
+.hearts span:nth-child(9) { top: 20%; left: 50%; animation-delay: 4s; font-size: 70px; }
+.hearts span:nth-child(10){ bottom: 25%; right: 50%; animation-delay: 4.5s; }
+.hearts span:nth-child(11){ top: 50%; left: 25%; animation-delay: 5s; font-size: 65px; }
+.hearts span:nth-child(12){ top: 75%; right: 30%; animation-delay: 5.5s; font-size: 100px; }
+.hearts span:nth-child(13){ top: 15%; left: 70%; animation-delay: 6s; }
+.hearts span:nth-child(14){ bottom: 35%; left: 60%; animation-delay: 6.5s; font-size: 80px; }
+.hearts span:nth-child(15){ top: 85%; right: 70%; animation-delay: 7s; }
+.hearts span:nth-child(16){ top: 25%; right: 40%; animation-delay: 0.7s; font-size: 75px; }
+.hearts span:nth-child(17){ bottom: 50%; left: 35%; animation-delay: 1.3s; font-size: 90px; }
+.hearts span:nth-child(18){ top: 70%; left: 80%; animation-delay: 2.2s; }
+.hearts span:nth-child(19){ bottom: 60%; right: 25%; animation-delay: 3.8s; font-size: 85px; }
+.hearts span:nth-child(20){ top: 45%; right: 60%; animation-delay: 4.7s; font-size: 95px; }
+
+/* MAIN CONTENT LAYER */
+.content {
+  position: relative;
+  z-index: 100;
+  padding: 40px 20px;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* IMAGE */
+.image-container {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.main-image {
+  width: 340px;
+  max-width: 90%;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  border: 5px solid white;
+}
+
+/* TEXT */
+.soft-text {
+  color: #7a004a;
+  font-size: 32px;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+}
+
+.big-question {
+  color: #b30000;
+  font-size: 52px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+  line-height: 1.3;
+  text-align: center;
+  width: 100%;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 200;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.yes-btn,
+.no-btn {
+  padding: 20px 50px;
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  font-family: Georgia, serif;
+  position: relative;
+  z-index: 300;
+}
+
+.yes-btn {
+  background: linear-gradient(135deg, #ff4da6 0%, #ff1a8c 100%);
+  color: white;
+  border: 3px solid white;
+}
+
+.yes-btn:hover {
+  background: linear-gradient(135deg, #ff1a8c 0%, #d91673 100%);
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(255,77,166,0.6);
+}
+
+.no-btn {
+  background: linear-gradient(135deg, #f0f0f0 0%, #d4d4d4 100%);
+  color: #333;
+  border: 3px solid #999;
+}
+
+.no-btn:hover {
+  background: linear-gradient(135deg, #e0e0e0 0%, #c4c4c4 100%);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .soft-text {
+    font-size: 24px;
+  }
+
+  .big-question {
+    font-size: 36px;
+  }
+
+  .yes-btn, .no-btn {
+    padding: 15px 35px;
+    font-size: 22px;
+  }
+
+  .hearts span {
+    font-size: 60px;
+  }
+}

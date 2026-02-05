@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Us 💕</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+  <!-- CENTER TEXT -->
+  <div class="center-message">
+    <h2>US</h2>
+    <p>
+      No matter how far you are, you are always in my mind. distance means nothing for us.<br>
+      I love all our days spent together, irl or online, good or bad. for you everything is worth it.<br>
+      Together we can do anything and get through anything in life. You are love of my life, my soulmate.<br>
+      My heart only belongs to you 💜
+    </p>
+  </div>
+
+  <!-- SCATTERED PHOTOS -->
+  <img src="images/maks1.jpeg" class="photo p1">
+  <img src="images/maks2.jpeg" class="photo p2">
+  <img src="images/maks3.jpeg" class="photo p3">
+  <img src="images/maks4.jpeg" class="photo p4">
+  <img src="images/maks5.jpeg" class="photo p5">
+  <img src="images/maks6.jpeg" class="photo p6">
+  <img src="images/maks7.jpeg" class="photo p7">
+  <img src="images/maks8.jpeg" class="photo p8">
+  <img src="images/maks9.jpeg" class="photo p9">
+  <img src="images/maks10.jpeg" class="photo p10">
+  <img src="images/maks11.jpeg" class="photo p11">
+  <img src="images/maks12.jpeg" class="photo p12">
+  <img src="images/maks13.jpeg" class="photo p13">
+  <img src="images/maks14.jpeg" class="photo p14">
+
+  <!-- NEXT BUTTON -->
+  <button class="next-button" onclick="location.href='loveletter.html'">
+    continue 💗
+  </button>
+
+  <!-- BACKGROUND MUSIC -->
+  <audio id="bg-music" loop>
+    <source src="audio/bladeespecial.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- START OVERLAY -->
+  <div id="start-overlay" style="position:fixed;top:0;left:0;width:100%;height:100%;background:pink;display:flex;justify-content:center;align-items:center;z-index:1000;">
+    <button id="start-music" style="font-size:24px;padding:20px;">Click if you are blonde polish blue eyed boy💗</button>
+  </div>
+
+  <script>
+    const overlay = document.getElementById('start-overlay');
+    const btn = document.getElementById('start-music');
+    const music = document.getElementById('bg-music');
+
+    btn.addEventListener('click', () => {
+        music.currentTime = 76; // start from 12th second
+        music.play();
+        overlay.style.display = 'none'; // hide overlay
+    });
+  </script>
+
+</body>
+</html>

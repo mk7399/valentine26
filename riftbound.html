@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>For Maksio ❤️</title>
+  <link rel="stylesheet" href="riftbound.css">
+</head>
+<body>
+
+  <!-- MUSIC -->
+  <audio id="bg-music" loop>
+    <source src="audio/dancing.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- FLOATING HEARTS -->
+  <div class="hearts">
+    <span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span>
+    <span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span>
+    <span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span>
+    <span>💕</span><span>💖</span><span>💗</span><span>💓</span><span>💝</span>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
+    <!-- IMAGE -->
+    <div class="image-container">
+      <img src="images/riftbound.png" alt="Riftbound" class="main-image">
+    </div>
+
+    <!-- TEXT -->
+    <p class="soft-text">My beloved Maksio</p>
+
+    <h1 class="big-question">
+      WILL YOU MAKE ME HAPPIEST AND BE MY VALENTINE? ❤️
+    </h1>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+      <button class="yes-btn" onclick="location.href='finalpage.html'">
+        YES 💗
+      </button>
+
+      <button class="no-btn">
+        NO 💔
+      </button>
+    </div>
+  </div>
+
+<script>
+  // MUSIC AUTOPLAY - Aggressive approach
+  const music = document.getElementById('bg-music');
+  music.volume = 0.8;
+
+  // Try to play immediately
+  let musicPlaying = false;
+
+  function forcePlayMusic() {
+    if (!musicPlaying) {
+      music.play()
+        .then(() => {
+          musicPlaying = true;
+          console.log('🎵 Music started!');
+        })
+        .catch(err => {
+          console.log('Waiting for user interaction...');
+        });
+    }
+  }
+
+  // Try immediately
+  forcePlayMusic();
+
+  // Try after short delay
+  setTimeout(forcePlayMusic, 500);
+
+  // Try on EVERY possible interaction (will stop after first success)
+  ['click', 'touchstart', 'touchend', 'mousedown', 'mousemove', 'keydown', 'scroll'].forEach(event => {
+    document.addEventListener(event, forcePlayMusic, { once: true });
+  });
+
+  // Backup: try every second for 5 seconds
+  let attempts = 0;
+  const interval = setInterval(() => {
+    if (!musicPlaying && attempts < 5) {
+      forcePlayMusic();
+      attempts++;
+    } else {
+      clearInterval(interval);
+    }
+  }, 1000);
+
+  // NO button does nothing (looks like bug)
+  document.querySelector('.no-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    // Literally nothing happens - like a bug!
+  });
+</script>
+
+</body>
+</html>

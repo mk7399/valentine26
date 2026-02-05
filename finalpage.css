@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  background: linear-gradient(#ffb6d9, #ffcce6);
+  font-family: Georgia, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* MAIN CONTAINER */
+.container {
+  padding: 30px;
+}
+
+/* IMAGES */
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.photo {
+  width: 260px;
+  max-width: 40vw;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* TEXT */
+.message {
+  color: #7a004a;
+  font-size: 28px;
+  line-height: 1.6;
+}

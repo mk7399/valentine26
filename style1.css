@@ -1,0 +1,71 @@
+body {
+  background-color: #ffc0cb;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding-top: 100px;
+  margin: 0;
+}
+
+.title {
+  font-size: 48px;
+  color: purple;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.start-button {
+  background-color: white;
+  color: purple;
+  border: none;
+  padding: 20px 40px;
+  font-size: 24px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.start-button:hover {
+  background-color: #ffe6f0;
+}
+.center-image {
+  display: block;         /* makes the image a block element */
+  margin: 20px auto;      /* centers it and adds top/bottom spacing */
+  max-width: 300px;       /* optional: size limit */
+  border-radius: 10px;    /* optional: rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* optional: shadow */
+}
+/* CENTER TEXT */
+.center-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 192, 203, 0.9);
+  padding: 30px 35px;
+  border-radius: 25px;
+  text-align: center;
+  z-index: 100;
+}
+
+.center-message h2 {
+  margin: 0;
+  color: purple;
+  font-size: 36px;
+}
+
+.center-message p {
+  margin-top: 15px;
+  color: white;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
